@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'sanspro';
+  src: url('../assets/font/sanspro.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rubik';
+  src: url('../assets/font/rubik.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+* ::-webkit-scrollbar {
+    display: none;
+  }
+:host ::ng-deep body {
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+:host ::ng-deep .jockey-one {
+  color: #6670B1;
+  font-family: 'Jockey One', sans-serif;
+}
+:host ::ng-deep .malvie {
+  color: #A45679;
+  font-family: 'Malvie';
+}
+:host ::ng-deep .philosopher {
+  color: black;
+  font-family: 'Philosopher', sans-serif;
+}
+:host ::ng-deep .philosopher-1 {
+  color: white;
+  font-family: 'Philosopher', sans-serif;
+}
+:host ::ng-deep .roboto {
+  font-family: 'Roboto Slab', serif;
+  color: black;
+}
+
+:host ::ng-deep .alcubierre {
+  font-family: 'Alcubierre', sans-serif;
+  color: black;
+}
+
+:host ::ng-deep .yrsa {
+  font-family: 'Yrsa', serif;
+  color: black;
+}
+
+
+:host ::ng-deep #ion-text-center{
+
+  text-align: center;
+
+}
+
+

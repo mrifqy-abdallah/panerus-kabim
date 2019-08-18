@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="ion-text-center" class="philosopher">
+      Kabar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" ionPull="ionPull($event)" ionStart="ionStart($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+
+    </ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-list id="list" *ngIf="kabar">
+    <div *ngFor="let item of kabar"> 
+      <ion-item class="roboto" button="true" (click)="showNote(item.DESKRIPSI, item.LINK)">
+        <ion-icon name="{{item.ION_ICON}}" color="medium" slot="start" id="refresher"></ion-icon>
+        <ion-label>{{item.ISI}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

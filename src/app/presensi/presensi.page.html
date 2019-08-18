@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="philosopher">Presensi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="roboto">
+  <ion-grid no-padding no-margin>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" padding>
+
+        <ion-card text-center color="light" no-margin margin-bottom>
+          <p>QR-Code berikut adalah untuk agenda<br><b>{{ agend }}</b></p>
+        </ion-card>
+
+        <ion-card *ngIf="createdCode" no-margin margin-bottom>
+          <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+        </ion-card>
+
+        <ion-button (click)="addNote()">Tambah catatan ketidakhadiran</ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="updateAgenda()"><ion-icon name="refresh"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

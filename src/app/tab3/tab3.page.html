@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-grid no-margin no-padding>
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-title id="ion-text-center" class="philosopher">Profil</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-row margin-top>
+      <ion-col size-md="4" offset-md="4" size="6" offset="3">
+        <img src={{img}}>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" no-padding>
+        <ion-card>
+          <ion-item button="true" (click)="next('tab3/profil')" color="primary">
+            <ion-label class="robotoq">
+              <h1>{{ namae }}</h1>
+              <p>{{ ide }} - {{ prodie }} ({{ fakultase }})</p>
+            </ion-label>
+            <ion-icon md="md-arrow-round-forward" slot="end"></ion-icon>
+          </ion-item>
+        </ion-card>
+
+        <ion-card color="light">
+          <ion-item button="true" (click)="next('tab3/tentangapp')">
+            <ion-label class="roboto">
+              <h3><b>Tentang Aplikasi</b></h3>
+            </ion-label>
+            <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item button="true" (click)="next('tab3/aduan')">
+            <ion-label class="roboto">
+              <h3><b>Laporkan Aduan</b></h3>
+            </ion-label>
+            <ion-icon name="mail" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item button="true" (click)="logoutUser()" lines="full" margin-bottom>
+            <ion-label class="roboto">
+              <h3><b>Logout</b></h3>
+            </ion-label>
+            <ion-icon name="exit" slot="start"></ion-icon>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
